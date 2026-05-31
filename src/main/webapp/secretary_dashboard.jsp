@@ -74,7 +74,6 @@
         <% if (coursesList != null && !coursesList.isEmpty()) { 
             for (Courses c : coursesList) { %>
                 <tr>
-                    <%-- Δοκιμή με getCourseId() --%>
                     <td><%= c.getCourseId() %></td>
                     <td><%= c.getCourseName() %></td>
                     <td>
@@ -101,7 +100,6 @@
                 <option value="">-- Επιλέξτε Μάθημα --</option>
                 <% if (coursesList != null) {
                     for (Courses c : coursesList) { %>
-                        <%-- Δοκιμή με getCourseId() --%>
                         <option value="<%= c.getCourseId() %>"><%= c.getCourseId() %> - <%= c.getCourseName() %></option>
                     <% }
                 } %>
@@ -114,8 +112,9 @@
                 <option value="">-- Επιλέξτε Καθηγητή --</option>
                 <% if (professorsList != null) {
                     for (Professors p : professorsList) { %>
-                        <%-- Δοκιμή με getUsername() αντί για getProfId() --%>
-                        <option value="<%= p.getUsername() %>"><%= p.getName() %> <%= p.getSurname() %> (<%= p.getDepartment() %>)</option>
+                        <%-- FIX #1: Χρησιμοποιούμε getProfessorId() (numeric DB id) αντί για getUsername() --%>
+                        <%-- ώστε το SecretaryServlet να κάνει σωστά Integer.parseInt(profId) --%>
+                        <option value="<%= p.getProfessorId() %>"><%= p.getName() %> <%= p.getSurname() %> (<%= p.getDepartment() %>)</option>
                     <% }
                 } %>
             </select>

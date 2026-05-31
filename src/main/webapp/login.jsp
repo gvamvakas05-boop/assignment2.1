@@ -10,7 +10,7 @@
         .input-group { margin-bottom: 15px; text-align: left; }
         .input-group label { display: block; margin-bottom: 5px; font-weight: bold; }
         .input-group input { width: 93%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
-        .btn { background: #0056b3; color: white; border: none; padding: 10px width: 100%; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; }
+        .btn { background: #0056b3; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; cursor: pointer; font-size: 16px; }
         .btn:hover { background: #004085; }
         .error { color: red; margin-bottom: 15px; font-size: 14px; }
     </style>
